@@ -3,11 +3,12 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-Sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
-var gulpcssnano = require('gulp-cssnano');
+var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var runSequence = require('run-sequence');
 var del = require('del');
 var autoprefixer = require('gulp-autoprefixer');
+var gulpIf = require('gulp-if')
 
 
 	gulp.task('sass', function() {
@@ -44,13 +45,10 @@ var autoprefixer = require('gulp-autoprefixer');
   return gulp.src('app/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
 });
-	gulp.task('clean:dist', function(callback){
-  del(['dist/**/*', '!dist/images', '!dist/images/**/*'], callback)
+	gulp.task('clean:dist', function() {
+  return del.sync('dist');
 });
-gulp.task('clean', function(callback) {
-  del('dist');
-  return cache.clearAll(callback);
-});
+
 
 
 gulp.task('default', function (callback) {
@@ -59,17 +57,24 @@ gulp.task('default', function (callback) {
   )
 });
 
-	/*gulp.task('useref' function(){
-		var assets = useref.assets();
 
-		return gulp.src('app/*.html')
-		.pipe(assets)
-		.pipe(gulpIf('*.js', uglify()))
-		.pipe(gulpIf('*.css', minifyCSS))
-		.pipe(assets.restore())
-		.pipe(useref())
-		.pipe(gulp.dest('dist'))
-}); */
-
-
+gulp.task('useref', function(){
+  return gulp.src('app/*.html')
+    .pipe(useref())
+    .pipe(gulpIf('*.js', uglify()))
+    // Minifies only if it's a CSS file
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulp.dest('dist'))
+}); 
+gulp.task('default', function (callback) {
+  runSequence(['sass','browserSync', 'watch'],
+    callback
+  )
+});
+gulp.task('build', function (callback) {
+  runSequence('clean:dist',
+    ['sass', 'useref', 'images', 'fonts'],
+    callback
+  )
+});
 		
