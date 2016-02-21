@@ -1,11 +1,77 @@
-@import "typograpie";
+@import "typo";
 
 // Variabeln für Farben
-$main-color: #A8FF7B;
-$sec-color: #68E428;
-$com-main-color: #CC734E;
-$com-sec-color: #B26B4D;
+$mainColor: #24a19b;
+$secColor: #944b35;
 
-p {color: blue}
+$mainColorDark: 	#5c6362;
+$mainColorBlue: 	#3d7370;
+$mainColorBright: 	#24a19b;
+$mainColorLight:	#e7f1f1;
+
+$secColorDark: 		#7c5b4a;
+$secColorBrown:		#944b35;
+$secColorRosa:		#944;
+$secColorLight:		#944;
+
+
+header {background-color: $mainColor;
+	width: 100%;
+		p {color: white;
+			width: 200px;
+			margin: 0 auto;
+
+		}
+
+
+ };
+
+ 
+.logo {
+	background-image: url("../images/niki-test2.svg");
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	margin-left: 100px;
+	background-color: white;
+	background-position: 15px 0px;
+	border-radius: 50px;
+	
+
+
+};
+
+nav {
+		width: 100%;
+		padding-top: 20px;
+
+		ul {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			text-decoration: none;
+			list-style-type: none;
+			width: 100%;
+			padding: 0;
+			list-style-image: url("images/ ")
+
+
+		}
+
+
+}
+
+.logo {
+		
+	
+
+
+};
+footer {
+		
+
+
+};
+
 
  
