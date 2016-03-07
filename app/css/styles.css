@@ -1,5 +1,5 @@
-body {
-  font-family: "acumin-pro", "";
+body, h1, header {
+  font-family: "open sans", "";
   font-weight: 400;
   line-height: 1.45;
   color: #333; }
@@ -33,26 +33,40 @@ small, .font_small {
   font-size: 0.8em; }
 
 header {
-  background-color: #24a19b;
+  background: linear-gradient(#e7f1f1, #24a19b);
   width: 100%; }
   header p {
     color: white;
     width: 200px;
     margin: 0 auto; }
+  header h1 {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    color: #944b35; }
+
+body, html {
+  margin: 0px;
+  padding: 0px; }
 
 .logo {
   background-image: url("../images/niki-test2.svg");
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   background-repeat: no-repeat;
-  margin-left: 100px;
+  margin: 0 auto;
   background-color: white;
-  background-position: 15px 0px;
-  border-radius: 50px; }
+  background-position: 30px 10px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px; }
 
 nav {
   width: 100%;
-  padding-top: 20px; }
+  padding-top: 20px;
+  background-color: #24a19b; }
   nav ul {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -63,8 +77,22 @@ nav {
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
             justify-content: space-around;
-    text-decoration: none;
     list-style-type: none;
     width: 100%;
-    padding: 0;
-    list-style-image: url("images/ "); }
+    padding: 10px 0px;
+    color: white; }
+    nav ul a:link {
+      color: white;
+      text-decoration: none; }
+
+main {
+  width: 90%;
+  margin: 0 auto; }
+  main H3 {
+    color: #944b35; }
+  main .text-one {
+    float: left;
+    width: 60%; }
+  main .text-two {
+    float: right;
+    width: 30%; }

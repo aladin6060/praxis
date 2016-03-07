@@ -15,28 +15,31 @@ $secColorRosa:		#944;
 $secColorLight:		#944;
 
 
-header {background-color: $mainColor;
+header {background: linear-gradient($mainColorLight, $mainColor);
 	width: 100%;
 		p {color: white;
 			width: 200px;
 			margin: 0 auto;
 
 		}
-
+		h1 {display: flex;
+			justify-content: space-around;
+			color: $secColor}
 
  };
+ body, html{margin: 0px;padding: 0px}
 
  
 .logo {
 	background-image: url("../images/niki-test2.svg");
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	background-repeat: no-repeat;
-	margin-left: 100px;
+	margin: 0 auto;
 	background-color: white;
-	background-position: 15px 0px;
-	border-radius: 50px;
-	
+	background-position: 30px 10px;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
 
 
 };
@@ -44,16 +47,20 @@ header {background-color: $mainColor;
 nav {
 		width: 100%;
 		padding-top: 20px;
+		background-color: $mainColor;
 
 		ul {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-around;
-			text-decoration: none;
 			list-style-type: none;
 			width: 100%;
-			padding: 0;
-			list-style-image: url("images/ ")
+			padding: 10px 0px;
+			color: white;
+
+			a:link {color: white;text-decoration: none;}
+			
+
 
 
 		}
@@ -61,8 +68,11 @@ nav {
 
 }
 
-.logo {
-		
+main {width: 90%;
+	margin: 0 auto;
+		H3 {color: $secColor;}
+		.text-one{float:left; width: 60%}
+		.text-two{float:right;width:30%}
 	
 
 
