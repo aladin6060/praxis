@@ -1,7 +1,13 @@
-$font-normal: "open sans", "";
+$font-normal: "open sans", sans serif;
+$font-head: 'Merriweather', serif;
 
+h1 {
+  font-family: $font-head;
+  font-weight: 400;
 
-body,h1,header {
+}
+
+body,header {
   
   font-family: $font-normal;
   font-weight: 400;
@@ -17,9 +23,7 @@ h1, h2, h3, h4 {
   font-weight: inherit;
   line-height: 1.2;
 }
-h1 {
-  font-family: "acumin-pro";
-  }
+
 
 h1 {
   margin-top: 0;
@@ -28,7 +32,7 @@ h1 {
 
 h2 {font-size: 1.953em;}
 
-h3 {font-size: 1.563em;}
+h3 {font-size: 1.3em;}
 
 h4 {font-size: 1.25em;}
 

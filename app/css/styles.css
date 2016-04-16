@@ -1,5 +1,9 @@
-body, h1, header {
-  font-family: "open sans", "";
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 400; }
+
+body, header {
+  font-family: "open sans", sans serif;
   font-weight: 400;
   line-height: 1.45;
   color: #333; }
@@ -14,9 +18,6 @@ h1, h2, h3, h4 {
   line-height: 1.2; }
 
 h1 {
-  font-family: "acumin-pro"; }
-
-h1 {
   margin-top: 0;
   font-size: 2.441em; }
 
@@ -24,7 +25,7 @@ h2 {
   font-size: 1.953em; }
 
 h3 {
-  font-size: 1.563em; }
+  font-size: 1.3em; }
 
 h4 {
   font-size: 1.25em; }
@@ -32,25 +33,25 @@ h4 {
 small, .font_small {
   font-size: 0.8em; }
 
-header {
-  background: linear-gradient(#e7f1f1, #24a19b);
-  width: 100%; }
-  header p {
-    color: white;
-    width: 200px;
-    margin: 0 auto; }
-  header h1 {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    color: #944b35; }
+/*--------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------*/
 body, html {
   margin: 0px;
   padding: 0px; }
+
+header {
+  background: linear-gradient(#e7f1f1, #24a19b);
+  width: 100%; }
+
+h1 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  color: #a8161b; }
 
 .logo {
   background-image: url("../images/niki-test2.svg");
@@ -64,9 +65,8 @@ body, html {
   border-top-right-radius: 100px; }
 
 nav {
-  width: 100%;
-  padding-top: 20px;
-  background-color: #24a19b; }
+  background-color: #24a19b;
+  padding: 0px 20%; }
   nav ul {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -78,21 +78,106 @@ nav {
         -ms-flex-pack: distribute;
             justify-content: space-around;
     list-style-type: none;
-    width: 100%;
-    padding: 10px 0px;
-    color: white; }
+    margin: 0px;
+    padding: 0px; }
     nav ul a:link {
       color: white;
       text-decoration: none; }
+    nav ul .focus {
+      border-bottom: 5px solid #a8161b; }
+    nav ul li:hover {
+      -webkit-animation-name: borderbottom;
+              animation-name: borderbottom;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite; }
+    nav ul li {
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      font-size: 1.2em;
+      width: 200px;
+      text-align: center;
+      line-height: 2em;
+      height: 2em; }
+
+@-webkit-keyframes borderbottom {
+  0% {
+    border-bottom: 5px solid #24a19b; }
+  50% {
+    border-bottom: 5px solid #a8161b; }
+  100% {
+    border-bottom: 5px solid #24a19b; } }
+
+@keyframes borderbottom {
+  0% {
+    border-bottom: 5px solid #24a19b; }
+  50% {
+    border-bottom: 5px solid #a8161b; }
+  100% {
+    border-bottom: 5px solid #24a19b; } }
 
 main {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 400px; }
   main H3 {
-    color: #944b35; }
+    color: #a8161b; }
   main .text-one {
     float: left;
-    width: 60%; }
+    width: 55%; }
   main .text-two {
     float: right;
-    width: 30%; }
+    width: 35%; }
+  main .data {
+    font-size: small; }
+  main .post {
+    border-bottom: 2px solid #24a19b; }
+  main .post:last-child {
+    border-bottom: none; }
+
+footer {
+  clear: both;
+  background-color: #ebd9cc;
+  margin-bottom: 0px;
+  padding: 2em;
+  height: 150px; }
+  footer li {
+    text-decoration: none; }
+    footer li a:link {
+      text-decoration: none;
+      color: #7c5b4a; }
+  footer ul {
+    list-style-type: none;
+    text-indent: -35px; }
+  footer div:first-child {
+    float: left;
+    width: 30%;
+    margin-left: 10%; }
+  footer div:last-child {
+    float: left;
+    width: 30%;
+    margin-left: 10%; }
+  footer .focus a:link {
+    color: #24a19b; }
+
+/*-------------------------------------------------------
+Kontakt
+---------------------------------------------------------*/
+iframe {
+  width: 50%;
+  height: 500px; }
+
+.main2 {
+  margin: 20px 0; }
+  .main2 h2 {
+    margin-top: 0; }
+
+.kontakformular {
+  float: right;
+  width: 45%; }
+
+@media only screen and (max-width: 1300 px) {
+  * {
+    border: solid 1px pink; } }

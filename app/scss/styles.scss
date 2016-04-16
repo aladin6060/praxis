@@ -1,8 +1,9 @@
 @import "typo";
 
+
 // Variabeln für Farben
 $mainColor: #24a19b;
-$secColor: #944b35;
+$secColor: #a8161b;
 
 $mainColorDark: 	#5c6362;
 $mainColorBlue: 	#3d7370;
@@ -11,24 +12,21 @@ $mainColorLight:	#e7f1f1;
 
 $secColorDark: 		#7c5b4a;
 $secColorBrown:		#944b35;
-$secColorRosa:		#944;
-$secColorLight:		#944;
+$secColorRosa:		#c68369;
+$secColorLight:		#ebd9cc;
 
+/*--------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------*/
+
+body, html{margin: 0px;padding: 0px, }
 
 header {background: linear-gradient($mainColorLight, $mainColor);
-	width: 100%;
-		p {color: white;
-			width: 200px;
-			margin: 0 auto;
-
-		}
-		h1 {display: flex;
+	width: 100%;}
+h1 {display: flex;
 			justify-content: space-around;
-			color: $secColor}
-
- };
- body, html{margin: 0px;padding: 0px}
-
+			color: $secColor;};
+ 
  
 .logo {
 	background-image: url("../images/niki-test2.svg");
@@ -44,44 +42,86 @@ header {background: linear-gradient($mainColorLight, $mainColor);
 
 };
 
-nav {
-		width: 100%;
-		padding-top: 20px;
+nav {	
 		background-color: $mainColor;
+		padding: 0px 20%;
 
 		ul {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-around;
 			list-style-type: none;
-			width: 100%;
-			padding: 10px 0px;
-			color: white;
+			margin: 0px;
+			padding:0px;
 
-			a:link {color: white;text-decoration: none;}
-			
+			a:link {color: white;text-decoration: none; }
+			.focus{border-bottom: 5px solid $secColor;}
+			li:hover{animation-name: borderbottom; animation-duration: 2s;animation-iteration-count: infinite;}
 
+			li { 
+				flex-grow: 1;
+				font-size: 1.2em;	
+				width: 200px;
+				text-align: center;
+				line-height: 2em;
+				height: 2em;
 
+				
+				};
+		};
+};
+@keyframes borderbottom{ 
+	0%{border-bottom: 5px solid $mainColor}
+	50%{border-bottom: 5px solid $secColor;}
+	100%{border-bottom: 5px solid $mainColor}}
 
-		}
+	
 
+		
 
-}
 
 main {width: 90%;
 	margin: 0 auto;
 		H3 {color: $secColor;}
-		.text-one{float:left; width: 60%}
-		.text-two{float:right;width:30%}
+		.text-one{float:left; width: 55%}
+		.text-two{float:right;width:35%}
+	height: 400px;
+
+	.data{font-size:small}
+	.post{border-bottom: 2px solid $mainColor}
+	.post:last-child{border-bottom: none}
+
 	
-
-
 };
 footer {
-		
+	clear:both;
+	background-color: $secColorLight;
+	margin-bottom: 0px;
+	padding: 2em;
+	height:150px;
 
+	li {text-decoration: none;
+		a:link{text-decoration: none;
+				color: $secColorDark}
+		}
+	ul {list-style-type: none;
+		text-indent: -35px;
+		}
 
+div:first-child{ float: left; width: 30%; margin-left: 10% }
+div:last-child{float: left; width: 30%;margin-left: 10% }
+.focus a:link{color: $mainColor}
 };
+/*-------------------------------------------------------
+Kontakt
+---------------------------------------------------------*/
+iframe {width: 50%; height: 500px}
+.main2{ margin: 20px 0;
+	h2{margin-top: 0}
 
+}
+.kontakformular{float: right; width: 45%}
 
- 
+@media only screen and (max-width: 1300 px){
+	*{border: solid 1px pink}
+}
