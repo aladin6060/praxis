@@ -12,7 +12,6 @@
        <!--build:css css/styles.min.css -->
        <link rel="stylesheet" href="css/styles.css">
        <!--endbuild-->
-       <meta name="viewport" content="with=device-with, initial-scale=1.0"
        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
     </head>
@@ -24,7 +23,7 @@
             <header>
             <div class="picture">
                 <H1>
-                    Testat Internet technologies
+                    Testat Internet Technologies
                 </H1>
                 <div class="logo">
                 </div>
@@ -33,50 +32,35 @@
             </header>
             <nav>
                 <ul>
-                    <li class="focus"><a href="index.html">Home<a></li>
+                    <li ><a href="index.html">Home<a></li>
                     <li><a href="angebot.html">Angebot </a></li>
                     <li><a href="team.html">Team</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li class="focus"><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
-            <main>
-            <div class="text-one">
-                <h2>Neuigkeiten</h2>
-               <div class="post">
-                    
-                    <h3> Öffnungszeiten für Ostern </h3>
-                    <p>
-                    Wir sind für sie an Ostern von Freitag bis montag da <br>
-                    Samstag: 7.00-18.00 <br>
-                    Sonntag: 6.00-20.00
-                    <P class="data"> Gepostet am 18.03.2016 von Moni</p>
 
-                                        </p>
-                </div>
-                <div class="post">
-                     <h3> Neues Projekt von Monika Müller </h3>
-                    <p>
-                       nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo d 
-                    </p>
-                    <P class="data"> Gepostet am 18.03.2016 von Moni</p>
-                </div>
-                <div class="post">
-                   <h3 > Lore Ipsum </h3>
-                    <p>
-                       nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo d 
-                    </p>
-                    <P class="data"> Gepostet am 18.03.2016 von Moni</p>
+            <div class="main2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.939403198608!2d7.161161415560643!3d46.80549955096431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e693b2c1a07ab%3A0x5f8025cf6ad4f0cf!2sGrand-Rue%2C+1700+Fribourg!5e0!3m2!1sde!2sch!4v1459373870466"   frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="kontakformular">
+                 <h2> Kontakt Formular</h2>
+                 <form id="contactform" method="post" action="@root_path/app/contact.php">
+  <p><strong>Ihr Name</strong><br>
+  <input type="text" name="name" id="txtSurname" class="textBox" />
+
+  <p><strong>Ihre Email Adresse</strong><br>
+  <input type="email" name="email" id="txtEmail" class="textBox" />
+
+  <p><strong>Telefonnummer </strong><br>
+  <input type="tel" name="phone" id="txtPhone" class="textBox" />
+
+  <p><strong>Ihre Adresse</strong><br>
+  <textarea name="txtNotes" id="text" rows="9" style="width: 300px;"></textarea>
+
+  <p><input type="submit" name="btnSubmit" id="btnSubmit" value="send" />
+</form><p>
                 </div>
             </div>
-            <div class="text-two">
-                <h2>Allgemeine Öffnungszeiten</h2>
-                <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
-                </p>
-
-            </div>
-            </main>
-            <footer>
+             <footer>
                 <div>
                     <h4>Kontakt</h4>
                     <p>Strasss <br> Postleizahl Fribourg <br> Telephonnummer <br> E-Mail adresse</p>
@@ -84,10 +68,10 @@
                 <div>
                     <h4>Naviagtion</h4>
                     <ul>
-                        <li class="focus"><a href="index.html">Home<a></li>
+                        <li ><a href="index.html">Home<a></li>
                         <li><a href="angebot.html">Angebot </a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li class="focus" ><a href="team.html">Team</a></li>
+                        <li ><a href="kontakt.html">Kontakt</a></li>
                      </ul>
                 </div>
             </footer>
