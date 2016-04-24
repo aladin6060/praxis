@@ -1,4 +1,4 @@
-$font-normal: "open sans", sans serif;
+$font-normal: 'Open Sans', sans-serif;
 $font-head: 'Merriweather', serif;
 
 h1 {
@@ -7,7 +7,14 @@ h1 {
 
 }
 
-body,header {
+em {
+  font-family: $font-normal;
+  font-style: inherit;
+
+
+}
+
+body,header,main {
   
   font-family: $font-normal;
   font-weight: 400;
@@ -16,7 +23,7 @@ body,header {
 }
 
 p {margin-bottom: 1.3em;
-	font-family: "Open Sans"}
+	font-family: $font-normal}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;

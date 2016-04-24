@@ -2,15 +2,19 @@ h1 {
   font-family: "Merriweather", serif;
   font-weight: 400; }
 
-body, header {
-  font-family: "open sans", sans serif;
+em {
+  font-family: "Open Sans", sans-serif;
+  font-style: inherit; }
+
+body, header, main {
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.45;
   color: #333; }
 
 p {
   margin-bottom: 1.3em;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans", sans-serif; }
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
@@ -181,3 +185,7 @@ iframe {
 @media only screen and (max-width: 1300 px) {
   * {
     border: solid 1px pink; } }
+
+/*--------------------------------------------------
+Canvas
+-----------------------------------------------*/
