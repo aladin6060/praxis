@@ -1,0 +1,95 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="/images/niki-test2.svg" rel="shortcut icon" >
+        <!-- Place favicon.ico in the root directory -->
+       <!--build:css css/styles.min.css -->
+       <link rel="stylesheet" href="css/styles.css">
+       <!--endbuild-->
+       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+       <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--> 
+        <div class="wrapper">
+            <header>
+            <div class="picture">
+                <H1>
+                    <div> Gyn-Praxis  <em> Grand Rue </em> </div>
+                </H1>
+                <div class="logo">
+                </div>
+                
+            </div>
+            </header>
+            <nav>
+                <ul>
+                    <li ><a href="index.html">Home<a></li>
+                    <li><a href="angebot.html">Angebot </a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li class="focus"><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="main2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.939403198608!2d7.161161415560643!3d46.80549955096431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e693b2c1a07ab%3A0x5f8025cf6ad4f0cf!2sGrand-Rue%2C+1700+Fribourg!5e0!3m2!1sde!2sch!4v1459373870466"   frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="kontakformular">
+                 <h2> Kontakt Formular</h2>
+                 <form id="contactform" method="post" action="@root_path/app/contact.php">
+  <p><strong>Ihr Name</strong><br>
+  <input type="text" name="name" id="txtSurname" class="textBox" />
+
+  <p><strong>Ihre Email Adresse</strong><br>
+  <input type="email" name="email" id="txtEmail" class="textBox" />
+
+  <p><strong>Telefonnummer </strong><br>
+  <input type="tel" name="phone" id="txtPhone" class="textBox" />
+
+  <p><strong>Ihre Adresse</strong><br>
+  <textarea name="txtNotes" id="text" rows="9" style="width: 300px;"></textarea>
+
+  <p><input type="submit" name="btnSubmit" id="btnSubmit" value="send" />
+</form><p>
+                </div>
+            </div>
+             <footer>
+                <div>
+                    <h4>Kontakt</h4>
+                    <p>Strasss <br> Postleizahl Fribourg <br> Telephonnummer <br> E-Mail adresse</p>
+                </div>
+                <div>
+                    <h4>Naviagtion</h4>
+                    <ul>
+                        <li ><a href="index.html">Home<a></li>
+                        <li><a href="angebot.html">Angebot </a></li>
+                        <li class="focus" ><a href="team.html">Team</a></li>
+                        <li ><a href="kontakt.html">Kontakt</a></li>
+                     </ul>
+                </div>
+            </footer>
+        </div>
+      
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+       
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
