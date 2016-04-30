@@ -37,6 +37,9 @@ h4 {
 small, .font_small {
   font-size: 0.8em; }
 
+li {
+  line-height: 1.8em; }
+
 /*--------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------*/
@@ -122,31 +125,114 @@ nav {
   100% {
     border-bottom: 5px solid #24a19b; } }
 
-main {
+.index {
   width: 90%;
   margin: 0 auto;
   height: 400px; }
-  main H3 {
+  .index H3 {
     color: #a8161b; }
-  main .text-one {
+  .index .text-one {
     float: left;
     width: 55%; }
-  main .text-two {
+  .index .text-two {
     float: right;
-    width: 35%; }
-  main .data {
+    width: 35%;
+    background-color: #a8161b;
+    color: white;
+    text-align: center;
+    border: 10px solid white;
+    opacity: 0.6; }
+  .index adress a {
+    color: white; }
+  .index .data {
     font-size: small; }
-  main .post {
+  .index .post {
     border-bottom: 2px solid #24a19b; }
-  main .post:last-child {
+  .index .post:last-child {
     border-bottom: none; }
+
+.Angebot {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 10px;
+  background-color: rgba(140, 115, 115, 0.1); }
+  .Angebot div {
+    width: 70%;
+    margin-bottom: 20px; }
+  .Angebot H3 {
+    color: #a8161b;
+    font-size: 2em; }
+  .Angebot .angebot1 {
+    float: left;
+    width: 80%; }
+    .Angebot .angebot1 li:last-child {
+      list-style-type: none;
+      background-color: white; }
+  .Angebot .angebot2 {
+    float: right;
+    margin-top: 30px; }
+  .Angebot .angebot3 {
+    float: left;
+    width: 80%;
+    margin-top: 50px; }
+    .Angebot .angebot3 li:last-child {
+      list-style-type: none;
+      background-color: white; }
+  .Angebot .angebot4 {
+    float: right;
+    margin-top: 20px; }
+  .Angebot img {
+    width: 20%;
+    height: x;
+    border-radius: 150px;
+    clear: right; }
+
+.team {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .team img {
+    float: left;
+    margin: 10px;
+    margin-right: 40px; }
+  .team h3 {
+    text-align: center;
+    border: 1px solid black;
+    background-color: #3d7370;
+    height: 3em;
+    line-height: 3em;
+    color: white;
+    margin-top: 0px; }
+  .team div {
+    width: 40%;
+    min-width: 720px;
+    border: 3px solid black;
+    margin: 40px;
+    background-color: rgba(140, 115, 115, 0.1); }
+  .team img {
+    width: 200px;
+    height: 200px; }
+  .team span {
+    font-weight: 700;
+    line-height: 2em; }
+  .team p {
+    margin-top: 30px; }
 
 footer {
   clear: both;
   background-color: #ebd9cc;
   margin-bottom: 0px;
   padding: 2em;
-  height: 150px; }
+  height: 200px; }
   footer li {
     text-decoration: none; }
     footer li a:link {
@@ -180,12 +266,19 @@ iframe {
 
 .kontakformular {
   float: right;
-  width: 45%; }
+  width: 45%;
+  height: 500px;
+  background-color: rgba(140, 115, 115, 0.1);
+  padding: 0 20px; }
 
-@media only screen and (max-width: 1300 px) {
-  * {
-    border: solid 1px pink; } }
+adress a {
+  color: black; }
 
 /*--------------------------------------------------
-Canvas
+MediaQueris
 -----------------------------------------------*/
+@media only screen and (max-width: 1710 px) {
+  .angebot {
+    width: 100%; }
+  * {
+    border: 1px solid green; } }

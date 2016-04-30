@@ -76,33 +76,121 @@ nav {
 	100%{border-bottom: 5px solid $mainColor}}
 
 	
-
-		
-
-
-main {width: 90%;
+// Hauptteil für Index.html
+ .index {width: 90%;
 	margin: 0 auto;
 		H3 {color: $secColor;}
 		.text-one{float:left; width: 55%}
-		.text-two{float:right;width:35%}
+		.text-two{float:right;width:35%;
+			background-color: $secColor;
+			color: white;
+			text-align: center;
+			border: 10px solid white;
+			opacity: 0.6}
+			adress a {color:white;
+	}
 	height: 400px;
 
 	.data{font-size:small}
 	.post{border-bottom: 2px solid $mainColor}
-	.post:last-child{border-bottom: none}
+	.post:last-child{border-bottom: none}}
+		
+
+
+// Hauptteil für die Angebotsseite, noch nicht sicher ob abgrenzung genug gut
+ .Angebot {
+	width: 90%;
+	margin: 0 auto;
+
+	padding: 10px 10px;
+	div {width: 70%;
+			margin-bottom: 20px;
+}
+	H3 {color: $secColor;
+		font-size: 2em}
+	.angebot1 {
+			float: left;
+			li:last-child{list-style-type: none;
+				background-color:white;}
+			width:80%;
+
+		}
+	.angebot2  {
+			float: right;
+			margin-top:30px;
+
+			
+			
+			}
+	.angebot3 {
+			float: left;
+			li:last-child{list-style-type: none;
+			background-color:white;
+			}
+			width:80%;
+			margin-top: 50px;
+			}
+	.angebot4 {float: right;
+				margin-top:20px;
+				}
+	
+
+	background-color: rgba(140, 115, 115, 0.1);	
+	img {
+		
+	width: 20%;
+	height: x;
+	border-radius: 150px;
+	clear: right;
+	//border: 10px solid black;
+
+}							
+};
+
+//Hauptteil Team.html
+.team {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	img{float: left;
+		margin: 10px;
+		margin-right: 40px;}
+		
+	h3{text-align: center;
+		border:1px solid black;
+		background-color: $mainColorBlue;
+		height: 3em;
+		line-height: 3em;
+		color: white;
+		margin-top:0px;
+		}
+	div{width: 40%;
+		min-width: 720px;
+		border:3px solid black;
+		margin: 40px;
+		background-color: rgba(140, 115, 115, 0.1);
+
+		}
+	img{width: 200px;
+		height: 200px}
+	span{font-weight: 700; line-height: 2em;}
+	p{margin-top: 30px;
+		}
 
 	
-};
+}
+
 footer {
 	clear:both;
 	background-color: $secColorLight;
 	margin-bottom: 0px;
 	padding: 2em;
-	height:150px;
+	height:200px;
 
 	li {text-decoration: none;
 		a:link{text-decoration: none;
-				color: $secColorDark}
+				color: $secColorDark;}
 		}
 	ul {list-style-type: none;
 		text-indent: -35px;
@@ -120,12 +208,20 @@ iframe {width: 50%; height: 500px}
 	h2{margin-top: 0}
 
 }
-.kontakformular{float: right; width: 45%}
+.kontakformular{float: right; width: 45%;
+	height:500px;
+background-color: rgba(140, 115, 115, 0.1);
+padding:0 20px;}
 
-@media only screen and (max-width: 1300 px){
-	*{border: solid 1px pink}
-}
+
+adress a {color:black}
 
 /*--------------------------------------------------
-Canvas
+MediaQueris
 -----------------------------------------------*/
+
+
+@media only screen and (max-width: 1710 px){
+	.angebot{width:100%}
+	*{border: 1px solid green;}
+}
