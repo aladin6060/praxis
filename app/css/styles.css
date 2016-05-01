@@ -184,8 +184,9 @@ nav {
   .Angebot img {
     width: 20%;
     height: x;
-    border-radius: 150px;
-    clear: right; }
+    border-radius: 180px;
+    clear: right;
+    min-width: 200px; }
 
 .team {
   display: -webkit-flex;
