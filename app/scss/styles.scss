@@ -81,15 +81,17 @@ nav {
 
 
 main {width: 90%;
-	margin: 0 auto;
-		H3 {color: $secColor;}
-		.text-one{float:left; width: 55%}
-		.text-two{float:right;width:35%}
-	height: 400px;
+	margin: 20px auto;
+	justify-content:space-around;
+		display:flex;
+		min-height: 400px;
+		img{width:90%; height: 300px; max-width: 300px;object-fit:cover;}
+		a div{ background-color: $secColorLight; border-radius: 20px; text-align: center;padding: 20px;}
+		a:link{text-decoration: none;
+				color: black}
 
-	.data{font-size:small}
-	.post{border-bottom: 2px solid $mainColor}
-	.post:last-child{border-bottom: none}
+
+
 
 	
 };
@@ -98,7 +100,9 @@ footer {
 	background-color: $secColorLight;
 	margin-bottom: 0px;
 	padding: 2em;
-	height:150px;
+	height: 150px;
+	display:flex;
+	justify-content: space-around;
 
 	li {text-decoration: none;
 		a:link{text-decoration: none;
@@ -107,9 +111,8 @@ footer {
 	ul {list-style-type: none;
 		text-indent: -35px;
 		}
+	
 
-div:first-child{ float: left; width: 30%; margin-left: 10% }
-div:last-child{float: left; width: 30%;margin-left: 10% }
 .focus a:link{color: $mainColor}
 };
 /*-------------------------------------------------------
@@ -121,11 +124,28 @@ iframe {width: 50%; height: 500px}
 
 }
 .kontakformular{float: right; width: 45%}
+/*-------------------------------------------------------
+Media Queries
+---------------------------------------------------------*/
 
-@media only screen and (max-width: 1300 px){
-	*{border: solid 1px pink}
+@media screen and (max-width: 1350px){
+	nav {li{width: 100px !important;}}
 }
 
-/*--------------------------------------------------
-Canvas
------------------------------------------------*/
+@media screen and (max-width: 800px){
+	.flex-container{flex-direction: column;
+		div{margin: 10px;
+			border-radius: inherit ;}}
+}
+@media screen and (max-width:675px){
+	nav ul{flex-direction: column;
+		li{margin:0 auto;}}
+	footer{flex-direction: column;
+		height: inherit;
+		div{margin-left:30%;}}
+	img{width:90% }
+	.kontakformular{float: none; width: 100%;}
+	iframe{width: 100%; margin: 0px;};
+	.main2{margin: 0;}
+}
+
