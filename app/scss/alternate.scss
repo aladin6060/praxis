@@ -1,0 +1,150 @@
+@import "typo";
+
+
+// Variabeln für Farben
+$mainColor: #a8161b;
+$secColor: #24a19b;
+
+$mainColorDark: 	#5c6362;
+$mainColorBlue: 	#3d7370;
+$mainColorBright: 	#24a19b;
+$mainColorLight:	#e7f1f1;
+
+$secColorDark: 		#7c5b4a;
+$secColorBrown:		#944b35;
+$secColorRosa:		#c68369;
+$secColorLight:		#ebd9cc;
+
+/*--------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------*/
+
+body, html{margin: 0px;padding: 0px, }
+
+header {background: linear-gradient($mainColorLight, $mainColor);
+	width: 100%;}
+h1 {display: flex;
+			justify-content: space-around;
+			color: $secColor;};
+ 
+ 
+.logo {
+	background-image: url("../images/niki-test2.svg");
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	background-color: white;
+	background-position: 30px 10px;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+
+
+};
+
+nav {	
+		background-color: $mainColor;
+		padding: 0px 20%;
+
+		ul {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			list-style-type: none;
+			margin: 0px;
+			padding:0px;
+
+			a:link {color: white;text-decoration: none; }
+			.focus{border-bottom: 5px solid $secColor;}
+			li:hover{animation-name: borderbottom; animation-duration: 2s;animation-iteration-count: infinite;}
+
+			li { 
+				flex-grow: 1;
+				font-size: 1.2em;	
+				width: 200px;
+				text-align: center;
+				line-height: 2em;
+				height: 2em;
+
+				
+				};
+		};
+};
+@keyframes borderbottom{ 
+	0%{border-bottom: 5px solid $mainColor}
+	50%{border-bottom: 5px solid $secColor;}
+	100%{border-bottom: 5px solid $mainColor}}
+
+	
+
+		
+
+
+main {width: 90%;
+	margin: 20px auto;
+	justify-content:space-around;
+		display:flex;
+		min-height: 400px;
+		img{width:90%; height: 300px; max-width: 300px;object-fit:cover;}
+		a div{ background-color: $secColorLight; border-radius: 20px; text-align: center;padding: 20px;}
+		a:link{text-decoration: none;
+				color: black}
+
+
+
+
+	
+};
+footer {
+	clear:both;
+	background-color: $secColorLight;
+	margin-bottom: 0px;
+	padding: 2em;
+	height: 150px;
+	display:flex;
+	justify-content: space-around;
+
+	li {text-decoration: none;
+		a:link{text-decoration: none;
+				color: $secColorDark}
+		}
+	ul {list-style-type: none;
+		text-indent: -35px;
+		}
+	
+
+.focus a:link{color: $mainColor}
+};
+/*-------------------------------------------------------
+Kontakt
+---------------------------------------------------------*/
+iframe {width: 50%; height: 500px}
+.main2{ margin: 20px 0;
+	h2{margin-top: 0}
+
+}
+.kontakformular{float: right; width: 45%}
+/*-------------------------------------------------------
+Media Queries
+---------------------------------------------------------*/
+
+@media screen and (max-width: 1350px){
+	nav {li{width: 100px !important;}}
+}
+
+@media screen and (max-width: 800px){
+	.flex-container{flex-direction: column;
+		div{margin: 10px;
+			border-radius: inherit ;}}
+}
+@media screen and (max-width:675px){
+	nav ul{flex-direction: column;
+		li{margin:0 auto;}}
+	footer{flex-direction: column;
+		height: inherit;
+		div{margin-left:30%;}}
+	img{width:90% }
+	.kontakformular{float: none; width: 100%;}
+	iframe{width: 100%; margin: 0px;};
+	.main2{margin: 0;}
+}
